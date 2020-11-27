@@ -1,0 +1,66 @@
+body {
+    background: #d3caca;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .box {
+    min-height: 500px;
+    padding: 15px;
+    margin: 15px;
+  }
+  
+  .border {
+    border-left: 10px;
+  }
+  
+  .white {
+    background: white;
+  }
+  
+  .navbar {
+      padding: 10px;
+      background: lightsteelblue;
+    }
+  
+  .navbar-brand {
+    color: lightsteelblue;
+    font-size: 40px;
+  }
+  
+  /*How to change color of text in boostrap brand*/
+  /* #logo {
+    color: green;
+  } */
+  
+  .nav-link {
+    font-size: 20px;
+  }
+  
+  h2 {
+    font-size: 40px;
+    color: rgb(16, 194, 96);
+  }
+  
+  h3 {
+    color: rgb(16, 194, 96)
+  }
+  
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+    }
+  
+  
+  .imageNav-photo:hover {
+    /* Visuals */
+    opacity: 0.6;
+  }
+  .imageNav-photo.active {
+    /* Visuals */
+    border: 2px solid rgb(168, 1, 84);
+  }

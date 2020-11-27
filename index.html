@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=+, initial-scale=1.0">
+    <title>Thesis Project Results</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html" id="logo">Cosmic Ray Muon Anisotropy with the MINOS Far Detector</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
+                aria-haspopup="true" aria-expanded="false">
+                  Plots
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="visualizations_1.html">Temperature</a>
+                  <a class="dropdown-item" href="visualizations_2.html">Humidity</a>
+                  <a class="dropdown-item" href="visualizations_3.html">Cloud Cover</a>
+                  <a class="dropdown-item" href="visualizations_4.html">Wind Speed</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="visualizations_5.html">Northern Hemisphere Temp vs. Lat</a>
+                  <a class="dropdown-item" href="visualizations_6.html">Southern Hemisphere Temp vs. Lat</a>
+                  <a class="dropdown-item" href="visualizations_7.html">Global Heatmap</a>
+                  <a class="dropdown-item" href="visualizations_8.html">Specific Hotel Locations</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="comparisons.html">Comparisons</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="data.html">Data</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+      <div class="container">
+    
+        <div class="row">
+          <div class="col-sm-6 col-md-12">
+            <div class="box white">
+              <h2>Summary</h2>
+              <h3>Examining Weather Trends</h3>
+              <hr>
+              <img src="Resources\assets\images\lat_vs_temp.png" class = img-fluid 
+              alt="Plot of Latitude vs. Temperature" align= "left" >
+              <p>
+              This project is the culimation of learning using API's to pull relevant
+              information from OpenWeather and Google's API.
+              <br>
+              <br>
+              The project consists of two parts. The first uses OpenWeather's API to
+              pull weather data from a large list of cities pulled from the Citipi API.
+              In order to do so, a list of random latitude and longitude values are created
+              and passed into the Citipi API. The nearest city is then matched with the 
+              latitude and longitude if possible.
+              The raw data is converted into a pandas dataframe, from which data plots
+              and analysis were performed. The most relevant plots are included.
+              <br><br>
+              The second part uses Google's API and the data from part one to create two
+              heatmaps. The first heatmap uses humidity values as a weight to create a
+              heatmap of the most humid locations with the given data. The second heatmap
+              uses specific weather criteria to locate the best vacation spots. Using Google's
+              API, a marker with hotel information was then placed on the map.
+            </p>
+            </div>
+            <div class="box white">
+              <h2>Visualizations</h2>
+              <hr>
+              <div class="row">
+                <div class="col-md-3">
+                  <a href="visualizations_1.html">
+                    <img src="Resources\assets\images\lat_vs_temp.png" class="img-fluid" 
+                    alt="Plot of Latitude vs. Temperature" style="width:200px;height:150px;">
+                  </a>
+                </div>
+                <div class="col-md-3">
+                  <a href="visualizations_2.html">
+                    <img src="Resources\assets\images\lat_vs_humidity.png" class="img-fluid" 
+                    alt="Plot of Latitude vs. Humidity" style="width:200px;height:150px;">
+                  </a>
+                </div>
+                <div class="col-md-3">
+                  <a href="visualizations_3.html">
+                    <img src="Resources\assets\images\lat_vs_clouds.png" class="img-fluid" 
+                    alt="Plot of Latitude vs. Cloud Cover" style="width:200px;height:150px;">
+                  </a>
+                </div>
+                <div class="col-md-3">
+                  <a href="visualizations_4.html">
+                    <img src="Resources\assets\images\lat_vs_windSpeed.png" class="img-fluid" 
+                    alt="Plot of Latitude vs. Wind Speed" style="width:200px;height:150px;">
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <a href="visualizations_5.html">
+                    <img src="Resources\assets\images\north_temp_vs_lat.png" class="img-fluid"
+                    alt="A plot of temperature against latitude in the Northern hemisphere">
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="visualizations_6.html">
+                    <img src="Resources\assets\images\south_temp_vs_lat.png" class="img-fluid"
+                    alt="A plot of temperature against latitude in the Southern hemisphere">
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <a href="visualizations_7.html">
+                    <img src="Resources\assets\images\heat_map.png" class="img-fluid"
+                    alt="A heat map using specified weather values to find the most comfortable places to vacation">
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="visualizations_8.html">
+                    <img src="Resources\assets\images\map_with_icon.png" class="img-fluid"
+                    alt="Map using weather data and Google API to locate hotels in best vacation spots">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col-sm-6 col-md-12">
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
+</body>
+</html>
